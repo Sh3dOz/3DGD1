@@ -35,6 +35,10 @@ public class CubeRoll : MonoBehaviour {
 			index %= cubes.Count;
 			cubeMesh = cubes[index].transform;
 			cam.GetComponent<CameraFollow>().target = cubeMesh.parent.gameObject;
+			lastRotation = Quaternion.identity;
+			isMoving = false;
+			direction = CubeDirection.none;
+			CalculatePivot();
         }
 		// Listening for player input if player is currently not moving.
 		if(direction == CubeDirection.none) {
@@ -143,6 +147,9 @@ public class CubeRoll : MonoBehaviour {
 				break;
 			case CubeDirection.down:
 				pivot = new Vector3(0, -1, -1);
+				break;
+			case CubeDirection.none:
+				pivot = new Vector3(0, 0, 0);
 				break;
 		}
 
