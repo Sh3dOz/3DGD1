@@ -13,9 +13,14 @@ public class PushBlock : MonoBehaviour {
 	}
 
 	void Update() {
-		if(Vector3.Distance(transform.position, targetPosition) < 0.01 && isMoving) {
+		Vector2 pos = new Vector2(transform.position.x, transform.position.z),
+				targ = new Vector2(targetPosition.x, targetPosition.z),
+				diff = targ - pos;
+
+
+		if(diff.sqrMagnitude > 0.0001f && isMoving) {
 			isMoving = false;
-		} else {
+		} else if (isMoving) {
 			// Fix position
 			transform.position = Vector3.Lerp(transform.position, targetPosition, 8 * Time.deltaTime);
 		}
