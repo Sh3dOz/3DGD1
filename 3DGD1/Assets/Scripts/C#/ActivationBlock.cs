@@ -15,4 +15,20 @@ public class ActivationBlock : MonoBehaviour
     {
         tileToActivate.SetActive(false);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<CubeRoll>())
+        {
+            Activate();
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<CubeRoll>())
+        {
+            Deactivate();
+        }
+    }
 }

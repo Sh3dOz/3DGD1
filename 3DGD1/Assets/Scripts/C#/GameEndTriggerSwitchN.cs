@@ -4,8 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameEndTriggerSwitchN : MonoBehaviour {
+	public GameEndTriggerSwitchN secondEnd;
+	bool isTriggered;
 	IEnumerator OnTriggerEnter(Collider collider) {
-		yield return new WaitForSeconds(5);
-		SceneManager.LoadScene("Win");
+		isTriggered = true;
+		if (secondEnd.isTriggered == true)
+		{
+			yield return new WaitForSeconds(5);
+			SceneManager.LoadScene("Win");
+		}
 	}
 }
