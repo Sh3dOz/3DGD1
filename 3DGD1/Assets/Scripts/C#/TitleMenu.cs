@@ -12,16 +12,13 @@ public class TitleMenu : MonoBehaviour {
 	public GUIStyle exit;
 
 	void OnGUI() {
-		if(GUI.Button(new Rect((Screen.width - 182) * 0.5f, 350, 182, 64), "PLAY GAME", playGame))
-			SceneManager.LoadScene("Game");
-
-		if(GUI.Button(new Rect((Screen.width - 182) * 0.5f, 450, 182, 64), "INSTRUCTIONS", instructions))
+		if(GUI.Button(new Rect((Screen.width - 182) * 0.5f, 450, 182, 64), "PLAY GAME", playGame))
 			SceneManager.LoadScene("Instructions");
 
 		if(GUI.Button(new Rect((Screen.width - 182) * 0.5f, 550, 182, 64), "CREDITS", credits))
 			SceneManager.LoadScene("Credits");
 
-		if(GUI.Button(new Rect((Screen.width - 182) * 0.5f, 650, 182, 64), "EXIT", exit))
+		if (GUI.Button(new Rect((Screen.width - 182) * 0.5f, 650, 182, 64), "QUIT GAME", exit))
 			Application.Quit();
 	}
 }
