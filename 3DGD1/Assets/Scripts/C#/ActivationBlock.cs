@@ -18,7 +18,7 @@ public class ActivationBlock : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<CubeRoll>())
+        if (collision.gameObject.GetComponent<CubeRoll>() || collision.gameObject.GetComponent<PushBlock>())
         {
             Activate();
         }
@@ -26,7 +26,7 @@ public class ActivationBlock : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.GetComponent<CubeRoll>())
+        if (collision.gameObject.GetComponent<CubeRoll>() || collision.gameObject.GetComponent<PushBlock>())
         {
             Deactivate();
         }

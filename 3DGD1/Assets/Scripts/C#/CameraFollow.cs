@@ -13,12 +13,14 @@ public class CameraFollow : MonoBehaviour {
 	public GameObject target;
 
 	private Vector3 newPos;
-
-	void Update() {
+	public bool isFlipped;
+    private void Start()
+    {
+		transform.eulerAngles = camRotation;
+	}
+    void Update() {
 		camPivot = target.transform.position;
 		newPos = camPivot;
-
-		transform.eulerAngles = camRotation;
 		if(GetComponent<Camera>().orthographic) {
 			newPos += -transform.forward * camDistance * 4F;
 			GetComponent<Camera>().orthographicSize = camDistance;

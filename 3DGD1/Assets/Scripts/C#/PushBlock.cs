@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PushBlock : MonoBehaviour {
 	private Vector3 targetPosition;
-	private bool isMoving = false;
+	public bool isMoving = false;
 	private float yOrigin;
 
 	void Start() {
@@ -15,12 +15,15 @@ public class PushBlock : MonoBehaviour {
 	void Update() {
 		Vector2 pos = new Vector2(transform.position.x, transform.position.z),
 				targ = new Vector2(targetPosition.x, targetPosition.z),
-				diff = targ - pos;
+				diff = pos - targ;
 
 
-		if(diff.sqrMagnitude > 0.0001f && isMoving) {
+		if (diff.sqrMagnitude < 0.0001f)
+		{
 			isMoving = false;
-		} else if (isMoving) {
+		}
+		else if (isMoving)
+		{
 			// Fix position
 			transform.position = Vector3.Lerp(transform.position, targetPosition, 8 * Time.deltaTime);
 		}

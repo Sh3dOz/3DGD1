@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class CubeRoll : MonoBehaviour
 {
-
+	public bool secondCube;
+	bool canMove = true;
+	Rigidbody rb;
 	public Transform cubeMesh;
 	public bool rollForever = false;
 	private float rollSpeed = 400;
@@ -19,14 +21,12 @@ public class CubeRoll : MonoBehaviour
 	Quaternion lastRotation;
 	bool isClimbing = false;
 
-	public CubeRoll secondCube;
-	CameraFollow cam;
 	void Start()
 	{
 		// Sets the number of steps available.
 		steps = 500;
 		lastRotation = Quaternion.identity;
-		cam = FindObjectOfType<CameraFollow>();
+		rb = GetComponent<Rigidbody>();
 	}
 
 	public float GetScale() { return cubeSize; }
@@ -39,15 +39,17 @@ public class CubeRoll : MonoBehaviour
 
 	void Update()
 	{
+        if (secondCube)
+        {
+			rb.velocity = Vector3.up;
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+				canMove = !canMove;
+            }
+		}
 		if (Input.GetKeyDown(KeyCode.Z)) SetScale(2);
 		else if (Input.GetKeyDown(KeyCode.X)) SetScale(1);
 
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-			secondCube.enabled = true;
-			cam.target = secondCube.gameObject;
-			this.enabled = false;
-        }
 		// If our localScale does not match the cubeSize set, then we
 		// animate our cube towards the cubeSize gradually.
 		if (Mathf.Abs(cubeSize - transform.localScale.x) > 0.1f)
@@ -60,73 +62,79 @@ public class CubeRoll : MonoBehaviour
 		}
 		else transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);
 
-		if (direction == CubeDirection.none)
-		{
-			// If we are not moving in this frame,
-			// then listen for movement input.
-			if (Input.GetKeyDown(KeyCode.D))
+		if(canMove){
+			if (direction == CubeDirection.none)
 			{
-				direction = CubeDirection.right;
-			}
-			else if (Input.GetKeyDown(KeyCode.A))
-			{
-				direction = CubeDirection.left;
-			}
-			else if (Input.GetKeyDown(KeyCode.W))
-			{
-				direction = CubeDirection.up;
-			}
-			else if (Input.GetKeyDown(KeyCode.S))
-			{
-				direction = CubeDirection.down;
-			}
-
-		}
-		else
-		{
-
-			// Runs the first frame after input is detected.
-			if (!isMoving)
-			{
-				if (CheckCollision(direction))
+				// If we are not moving in this frame,
+				// then listen for movement input.
+				if (Input.GetKeyDown(KeyCode.D))
 				{
-					// If a wall is blocking, then we stop moving.
-					isMoving = false;
+					direction = CubeDirection.right;
+				}
+				else if (Input.GetKeyDown(KeyCode.A))
+				{
+					direction = CubeDirection.left;
+				}
+				else if (Input.GetKeyDown(KeyCode.W))
+				{
+					direction = CubeDirection.up;
+				}
+				else if (Input.GetKeyDown(KeyCode.S))
+				{
+					direction = CubeDirection.down;
+				}
 
-					// If a push block is in the way, then we push it.
-					if (hit.collider.gameObject.GetComponent<PushBlock>())
+			}
+			else
+			{
+
+				// Runs the first frame after input is detected.
+				if (!isMoving)
+				{
+					if (CheckCollision(direction))
 					{
-						hit.collider.gameObject.GetComponent<PushBlock>().Move(hit.normal, 1);
+						// If a wall is blocking, then we stop moving.
+						isMoving = false;
+
+						// If a push block is in the way, then we push it.
+						if (hit.collider.gameObject.GetComponent<PushBlock>())
+						{
+							hit.collider.gameObject.GetComponent<PushBlock>().Move((transform.position - hit.collider.gameObject.transform.position).normalized, 1);
+						}
+						else
+						{
+							// Attempts to climb the cube in front.
+							// If you want to be able to climb push blocks, you will have
+							// to move this out of this block.
+							if (!CheckCollision(direction, true))
+							{
+								CalculatePivot(true);
+								DeductStepCount();
+								isMoving = true;
+								isClimbing = true;
+								return;
+							}
+						}
+
+						direction = CubeDirection.none;
+
+						return;
 					}
 					else
 					{
-						// Attempts to climb the cube in front.
-						// If you want to be able to climb push blocks, you will have
-						// to move this out of this block.
-						if (!CheckCollision(direction, true))
+						if (secondCube)
 						{
-							CalculatePivot(true);
-							DeductStepCount();
-							isMoving = true;
-							isClimbing = true;
-							return;
+							CalculatePivot();
 						}
+						else
+						{
+							CalculatePivot();
+						}
+						DeductStepCount();
+						isMoving = true;
 					}
-
-					direction = CubeDirection.none;
-
-					return;
-				}
-				else
-				{
-					CalculatePivot();
-					DeductStepCount();
-					isMoving = true;
 				}
 			}
-
-			// Handles the rotation of the cube to the new position
-			// after we determine that the cube is able to move.
 			switch (direction)
 			{
 				case CubeDirection.right:
@@ -213,7 +221,6 @@ public class CubeRoll : MonoBehaviour
 
 		float y = setPivotOnTop ? 1 : -1;
 
-		// Setting the pivot based on which direction we are moving.
 		switch (direction)
 		{
 			case CubeDirection.right:
@@ -229,7 +236,6 @@ public class CubeRoll : MonoBehaviour
 				pivot = new Vector3(0, y, -1);
 				break;
 		}
-
 		// Calculates the point around which the block will flop
 		pivot = transform.position + (pivot * cubeSize * 0.5f);
 

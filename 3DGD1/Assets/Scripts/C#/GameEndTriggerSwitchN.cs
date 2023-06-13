@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameEndTriggerSwitchN : MonoBehaviour {
-	public GameEndTriggerSwitchN secondEnd;
-	bool isTriggered;
-	IEnumerator OnTriggerEnter(Collider collider) {
-		isTriggered = true;
-		if (secondEnd.isTriggered == true)
+
+	IEnumerator OnTriggerEnter(Collider collider)
+	{
+		if (collider.GetComponent<CubeRoll>())
 		{
-			yield return new WaitForSeconds(5);
+			yield return new WaitForSeconds(1);
 			SceneManager.LoadScene("Win");
 		}
 	}
