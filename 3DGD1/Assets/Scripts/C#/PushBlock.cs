@@ -6,7 +6,7 @@ public class PushBlock : MonoBehaviour {
 	private Vector3 targetPosition;
 	public bool isMoving = false;
 	private float yOrigin;
-
+	float originPosition;
 	void Start() {
 		targetPosition = transform.position;
 		yOrigin = transform.position.y;
@@ -17,7 +17,7 @@ public class PushBlock : MonoBehaviour {
 				targ = new Vector2(targetPosition.x, targetPosition.z),
 				diff = pos - targ;
 
-
+		//Make range that it can move in
 		if (diff.sqrMagnitude < 0.0001f)
 		{
 			isMoving = false;
