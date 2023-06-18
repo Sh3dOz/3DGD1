@@ -1,0 +1,1059 @@
+fileFormatVersion: 2
+guid: 07c48d002fc0e1743bce4df399b81d3c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: game ui jelly purple_0
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 3777
+        width: 391
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d126b7248cd2949a53528054f73b59
+      internalID: 642640140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_1
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 3764
+        width: 420
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ebc351074a4cc4690446f9dedecbec
+      internalID: 428678682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_2
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 3764
+        width: 422
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fc0118941f7fd47af296ee7094d264
+      internalID: -1481591270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_3
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 3764
+        width: 420
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a735480f547cf1b4bad7ef573ab0c532
+      internalID: 117944323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_4
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 3764
+        width: 420
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17b8cb5b0b7bec46b17f9c873508e29
+      internalID: -1261667298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_5
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 3751
+        width: 420
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c321abab5693842ae31ab88c97c4e3
+      internalID: 2058709792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_6
+      rect:
+        serializedVersion: 2
+        x: 3209
+        y: 3717
+        width: 422
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ed4ef7534c80a44895f70eb4e9fb49
+      internalID: -2052387777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_7
+      rect:
+        serializedVersion: 2
+        x: 3746
+        y: 3730
+        width: 422
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224dcc04fc588c04f8ceb3c66281f027
+      internalID: -1554670656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_8
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 3704
+        width: 422
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8595ba9909d187d4a963f40632655e39
+      internalID: -1138238967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_9
+      rect:
+        serializedVersion: 2
+        x: 4781
+        y: 3678
+        width: 433
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a0c78b4a6f8ae4d87b2d4e88e42754
+      internalID: 2026384988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_10
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1892
+        width: 1238
+        height: 1713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7178e383f85788d4b84aa385fbfbd947
+      internalID: -2095533332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_11
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 3355
+        width: 856
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f39b4534e6efc43b31566f11c5ac47
+      internalID: 2021447381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_12
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 3352
+        width: 855
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236532d2d6c33104783f89e355301248
+      internalID: 1453727449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_13
+      rect:
+        serializedVersion: 2
+        x: 3285
+        y: 3250
+        width: 419
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737a326bde882874d9f85ea392aba09d
+      internalID: -81212162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_14
+      rect:
+        serializedVersion: 2
+        x: 3793
+        y: 3211
+        width: 422
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5856ad0908bcfa34fa9e2ff56d1058f2
+      internalID: 815267244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_15
+      rect:
+        serializedVersion: 2
+        x: 4296
+        y: 3263
+        width: 1043
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fff799b11ba8641822532661a6e987
+      internalID: 1084401440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_16
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 2922
+        width: 855
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca0f703cf0bab94fb0a8f8a9031be3f
+      internalID: 80467239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_17
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 2938
+        width: 855
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2a90a7e89f8ae428249f1458feb012
+      internalID: 161598741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_18
+      rect:
+        serializedVersion: 2
+        x: 3618
+        y: 2437
+        width: 1231
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ac6a11b4175ee469517ed42fc7c660
+      internalID: -1838414057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_19
+      rect:
+        serializedVersion: 2
+        x: 4951
+        y: 2805
+        width: 276
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d095801ec971a79439ba6e7d3e5dd4c7
+      internalID: -895942567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_20
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 2471
+        width: 938
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70d53f8153f40943b0769821192079b
+      internalID: 1456320723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_21
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 2474
+        width: 485
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f746a4fe4571ff64785d443ea7951360
+      internalID: -47576778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_22
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 2497
+        width: 482
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd722eac78ffcb49939f48b97f14fa5
+      internalID: -1648694855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_23
+      rect:
+        serializedVersion: 2
+        x: 4938
+        y: 2427
+        width: 307
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa53c60cc33abcf42bfddd088239b49e
+      internalID: -571814203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_24
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 1884
+        width: 1590
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686c4224d42d7004f94319fe8afceb5a
+      internalID: 1768866032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_25
+      rect:
+        serializedVersion: 2
+        x: 3379
+        y: 1890
+        width: 1386
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4f6db7b165830499636398f44a4c27
+      internalID: -1142538118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_26
+      rect:
+        serializedVersion: 2
+        x: 4945
+        y: 1986
+        width: 277
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edb6af2b06b48e4e93d8ec1df4cdf2e
+      internalID: 1648554456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1642
+        width: 1419
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0feb914a18f90c1489442d4c70075fda
+      internalID: -1827504602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_28
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 524
+        width: 1001
+        height: 1254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc45a976fda3e354a962b612ca4e04cb
+      internalID: 505746578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_29
+      rect:
+        serializedVersion: 2
+        x: 2938
+        y: 1228
+        width: 1387
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af680acf4d3154b4fa5058ec9bf69724
+      internalID: 1588940468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_30
+      rect:
+        serializedVersion: 2
+        x: 4969
+        y: 1603
+        width: 307
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2adb1517b97049c4ab547ef3bd66e361
+      internalID: -1403637136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_31
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1413
+        width: 1418
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62cbdaec91ccfb43be00beb1e7d671f
+      internalID: -722601887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_32
+      rect:
+        serializedVersion: 2
+        x: 4356
+        y: 1160
+        width: 874
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504a6c3d4af9402449b773561eeb4841
+      internalID: -1085571120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_33
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 719
+        width: 1741
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe35b4a323c9e1e4b8ea922dd3e1057d
+      internalID: -574413213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_34
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 620
+        width: 1376
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66287a4022649334eb8d99fa34a1c1a9
+      internalID: -1928704263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_35
+      rect:
+        serializedVersion: 2
+        x: 4692
+        y: 782
+        width: 308
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450d1357abbf57541ab3ff8a4cab44a5
+      internalID: -734841377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_36
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 104
+        width: 1340
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faae67be00f90ec47a6da49aaad856ea
+      internalID: 8510218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_37
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 0
+        width: 1377
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5b5032cdd2376448a8a3c30b289f9d
+      internalID: -60304042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_38
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 13
+        width: 1376
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d71543712d397e41a898d1542868204
+      internalID: -95428445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_39
+      rect:
+        serializedVersion: 2
+        x: 4401
+        y: 446
+        width: 276
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2769d35a42c358a418fb2eef468f90b5
+      internalID: 1492739663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_40
+      rect:
+        serializedVersion: 2
+        x: 5021
+        y: 446
+        width: 279
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab628902eea9d9b44bc62f894677213b
+      internalID: 55458332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game ui jelly purple_41
+      rect:
+        serializedVersion: 2
+        x: 4692
+        y: 138
+        width: 308
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4c3eb698a137c4381c5486aa05642e
+      internalID: -730635475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1a06de1dfd1cae740a1b37c8e8932780
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      game ui jelly purple_4: -1261667298
+      game ui jelly purple_22: -1648694855
+      game ui jelly purple_19: -895942567
+      game ui jelly purple_35: -734841377
+      game ui jelly purple_12: 1453727449
+      game ui jelly purple_16: 80467239
+      game ui jelly purple_36: 8510218
+      game ui jelly purple_9: 2026384988
+      game ui jelly purple_26: 1648554456
+      game ui jelly purple_37: -60304042
+      game ui jelly purple_2: -1481591270
+      game ui jelly purple_27: -1827504602
+      game ui jelly purple_38: -95428445
+      game ui jelly purple_6: -2052387777
+      game ui jelly purple_40: 55458332
+      game ui jelly purple_10: -2095533332
+      game ui jelly purple_31: -722601887
+      game ui jelly purple_0: 642640140
+      game ui jelly purple_5: 2058709792
+      game ui jelly purple_15: 1084401440
+      game ui jelly purple_18: -1838414057
+      game ui jelly purple_7: -1554670656
+      game ui jelly purple_24: 1768866032
+      game ui jelly purple_13: -81212162
+      game ui jelly purple_23: -571814203
+      game ui jelly purple_32: -1085571120
+      game ui jelly purple_28: 505746578
+      game ui jelly purple_11: 2021447381
+      game ui jelly purple_29: 1588940468
+      game ui jelly purple_3: 117944323
+      game ui jelly purple_30: -1403637136
+      game ui jelly purple_20: 1456320723
+      game ui jelly purple_21: -47576778
+      game ui jelly purple_34: -1928704263
+      game ui jelly purple_14: 815267244
+      game ui jelly purple_33: -574413213
+      game ui jelly purple_8: -1138238967
+      game ui jelly purple_17: 161598741
+      game ui jelly purple_41: -730635475
+      game ui jelly purple_25: -1142538118
+      game ui jelly purple_39: 1492739663
+      game ui jelly purple_1: 428678682
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

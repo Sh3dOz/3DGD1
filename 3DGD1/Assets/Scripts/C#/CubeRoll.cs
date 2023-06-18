@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class CubeRoll : MonoBehaviour
 {
-	public bool secondCube;
+	public GameObject secondCube;
 	bool canMove = true;
 	Rigidbody rb;
 	public Transform cubeMesh;
@@ -20,13 +20,15 @@ public class CubeRoll : MonoBehaviour
 
 	Quaternion lastRotation;
 	bool isClimbing = false;
-
+	CameraFollow cam;
+	public GameObject moveEffect;
 	void Start()
 	{
 		// Sets the number of steps available.
 		steps = 500;
 		lastRotation = Quaternion.identity;
 		rb = GetComponent<Rigidbody>();
+		cam = FindObjectOfType<CameraFollow>();
 	}
 
 	public float GetScale() { return cubeSize; }
@@ -39,13 +41,11 @@ public class CubeRoll : MonoBehaviour
 
 	void Update()
 	{
-        if (secondCube)
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
-			rb.velocity = Vector3.up;
-            if (Input.GetKeyDown(KeyCode.Tab))
-            {
-				canMove = !canMove;
-            }
+			secondCube.GetComponent<CubeRoll>().enabled = true;
+			cam.target = secondCube;
+			this.enabled = false;
 		}
 		if (Input.GetKeyDown(KeyCode.Z)) SetScale(2);
 		else if (Input.GetKeyDown(KeyCode.X)) SetScale(1);
@@ -115,21 +115,13 @@ public class CubeRoll : MonoBehaviour
 								return;
 							}
 						}
-
 						direction = CubeDirection.none;
 
 						return;
 					}
 					else
 					{
-						if (secondCube)
-						{
-							CalculatePivot();
-						}
-						else
-						{
-							CalculatePivot();
-						}
+						CalculatePivot();
 						DeductStepCount();
 						isMoving = true;
 					}
@@ -241,6 +233,7 @@ public class CubeRoll : MonoBehaviour
 
 		if (GetComponent<AudioSource>())
 			GetComponent<AudioSource>().Play(); // Play the flop sound 
+			Instantiate(moveEffect, transform.position, transform.rotation);
 	}
 
 	bool CheckCollision(CubeDirection direction, bool stepUp = false)

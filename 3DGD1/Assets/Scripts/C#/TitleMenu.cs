@@ -3,22 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[ExecuteInEditMode]
-
 public class TitleMenu : MonoBehaviour {
-	public GUIStyle playGame;
-	public GUIStyle instructions;
-	public GUIStyle credits;
-	public GUIStyle exit;
 
-	void OnGUI() {
-		if(GUI.Button(new Rect((Screen.width - 182) * 0.5f, 450, 182, 64), "PLAY GAME", playGame))
+	public AudioSource SFX;
+	public AudioClip UISelect;
+
+	public void StartGame()
+    {
+		SFX.PlayOneShot(UISelect);
+		if (PlayerPrefs.GetFloat("OpenGame") == 0)
+		{
+			PlayerPrefs.SetFloat("OpenGame", 1);
 			SceneManager.LoadScene("Instructions");
+		}
+		else
+		{
+			SceneManager.LoadScene("Level Select");
+		}
+	}
 
-		if(GUI.Button(new Rect((Screen.width - 182) * 0.5f, 550, 182, 64), "CREDITS", credits))
-			SceneManager.LoadScene("Credits");
+	public void Options()
+    {
+		SFX.PlayOneShot(UISelect);
+		SceneManager.LoadScene("Options");
+	}
 
-		if (GUI.Button(new Rect((Screen.width - 182) * 0.5f, 650, 182, 64), "QUIT GAME", exit))
-			Application.Quit();
+	public void Credits()
+    {
+		SFX.PlayOneShot(UISelect);
+		SceneManager.LoadScene("Credits");
+	}
+
+	public void QuitGame()
+    {
+		SFX.PlayOneShot(UISelect);
+		Application.Quit();
 	}
 }

@@ -12,6 +12,15 @@ public class PauseScreen : MonoBehaviour
     [SerializeField] Slider masterSlider;
     [SerializeField] Slider musicSilder;
     [SerializeField] Slider sfxSlider;
+    float originalValueMaster;
+    float originalValueMusic;
+    float originalValueSFX;
+
+    public Image masterImage;
+    public Image musicImage;
+    public Image SFXImage;
+    public Sprite audioOn;
+    public Sprite audioOff;
 
     public const string MIXER_MASTER = "Master";
     public const string MIXER_MUSIC = "Music";
@@ -32,6 +41,30 @@ public class PauseScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(masterSlider.value > masterSlider.minValue)
+        {
+            masterImage.overrideSprite = audioOn;
+        }
+        else if (masterSlider.value == masterSlider.minValue)
+        {
+            masterImage.overrideSprite = audioOff;
+        }
+        if (musicSilder.value > masterSlider.minValue)
+        {
+            musicImage.overrideSprite = audioOn;
+        }
+        else if (musicSilder.value == musicSilder.minValue)
+        {
+            musicImage.overrideSprite = audioOff;
+        }
+        if (sfxSlider.value > masterSlider.minValue)
+        {
+            SFXImage.overrideSprite = audioOn;
+        }
+        else if (sfxSlider.value == sfxSlider.minValue)
+        {
+            masterImage.overrideSprite = audioOff;
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseScreen.SetActive(!pauseScreen.activeInHierarchy);
@@ -72,18 +105,51 @@ public class PauseScreen : MonoBehaviour
 
     public void MuteMaster(Slider volumeSlider)
     {
-        mixer.SetFloat(MIXER_MASTER, Mathf.Log10(volumeSlider.minValue) * 20);
-        volumeSlider.value = volumeSlider.minValue;
+        if (volumeSlider.value == volumeSlider.minValue)
+        {
+            volumeSlider.value = originalValueMaster;
+            mixer.SetFloat(MIXER_MASTER, Mathf.Log10(volumeSlider.value) * 20);
+            masterImage.overrideSprite = audioOn;
+        }
+        else
+        {
+            originalValueMaster = volumeSlider.value;
+            mixer.SetFloat(MIXER_MASTER, Mathf.Log10(volumeSlider.minValue) * 20);
+            volumeSlider.value = volumeSlider.minValue;
+            masterImage.overrideSprite = audioOff;
+        }
     }
 
     public void MuteMusic(Slider volumeSlider)
     {
-        mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(volumeSlider.minValue) * 20);
-        volumeSlider.value = volumeSlider.minValue;
+        if (volumeSlider.value == volumeSlider.minValue)
+        {
+            volumeSlider.value = originalValueMusic;
+            mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(volumeSlider.value) * 20);
+            musicImage.overrideSprite = audioOn;
+        }
+        else
+        {
+            originalValueMusic = volumeSlider.value;
+            mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(volumeSlider.minValue) * 20);
+            volumeSlider.value = volumeSlider.minValue;
+            musicImage.overrideSprite = audioOff;
+        }
     }
     public void MuteSFX(Slider volumeSlider)
     {
-        mixer.SetFloat(MIXER_SFX, Mathf.Log10(volumeSlider.minValue) * 20);
-        volumeSlider.value = volumeSlider.minValue;
+        if (volumeSlider.value == volumeSlider.minValue)
+        {
+            volumeSlider.value = originalValueSFX;
+            mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(volumeSlider.value) * 20);
+            SFXImage.overrideSprite = audioOn;
+        }
+        else
+        {
+            originalValueSFX = volumeSlider.value;
+            mixer.SetFloat(MIXER_SFX, Mathf.Log10(volumeSlider.minValue) * 20);
+            volumeSlider.value = volumeSlider.minValue;
+            SFXImage.overrideSprite = audioOff;
+        }
     }
 }

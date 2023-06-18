@@ -5,5 +5,6 @@ using UnityEngine;
 public class Levels : ScriptableObject
 {
     public string levelToLoad;
+    public string levelName;
     public Sprite levelThumbnail;
 }

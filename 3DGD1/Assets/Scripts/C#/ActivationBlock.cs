@@ -5,9 +5,14 @@ using UnityEngine;
 public class ActivationBlock : MonoBehaviour
 {
     public GameObject tileToActivate;
+    public AudioSource SFX;
+    public AudioClip platformSound;
+    public GameObject platformEffect;
 
     public void Activate()
     {
+        SFX.PlayOneShot(platformSound);
+        Instantiate(platformEffect, tileToActivate.transform.position, Quaternion.identity);
         tileToActivate.SetActive(true);
     }
 

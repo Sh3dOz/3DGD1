@@ -68,3 +68,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileToActivate: {fileID: 0}
+  SFX: {fileID: 7389461925447311830}
+  platformSound: {fileID: 8300000, guid: 83488836c25e3d447b247d7a307161a0, type: 3}
+  platformEffect: {fileID: 1877570582165908758, guid: 45266bfaab663f7468d12d77c8e76462, type: 3}
+--- !u!82 &7389461925447311830 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5623222947048580380, guid: aab55783602a90447b5c9b85ab3d04ce, type: 3}
+  m_PrefabInstance: {fileID: 2919765232658695370}
+  m_PrefabAsset: {fileID: 0}
