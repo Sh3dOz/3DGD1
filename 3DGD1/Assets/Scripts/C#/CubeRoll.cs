@@ -13,8 +13,7 @@ public class CubeRoll : MonoBehaviour
 	private RaycastHit hit;
 	public Vector3 pivot;
 	private float cubeSize = 1; // Block cube size
-	public static int steps;
-
+	LevelManager manager;
 	public enum CubeDirection { none, left, up, right, down };
 	public CubeDirection direction = CubeDirection.none;
 
@@ -24,8 +23,7 @@ public class CubeRoll : MonoBehaviour
 	public GameObject moveEffect;
 	void Start()
 	{
-		// Sets the number of steps available.
-		steps = 500;
+		manager = FindObjectOfType<LevelManager>();
 		lastRotation = Quaternion.identity;
 		rb = GetComponent<Rigidbody>();
 		cam = FindObjectOfType<CameraFollow>();
@@ -109,7 +107,7 @@ public class CubeRoll : MonoBehaviour
 							if (!CheckCollision(direction, true))
 							{
 								CalculatePivot(true);
-								DeductStepCount();
+								AddStepCount();
 								isMoving = true;
 								isClimbing = true;
 								return;
@@ -122,7 +120,7 @@ public class CubeRoll : MonoBehaviour
 					else
 					{
 						CalculatePivot();
-						DeductStepCount();
+						AddStepCount();
 						isMoving = true;
 					}
 				}
@@ -273,13 +271,8 @@ public class CubeRoll : MonoBehaviour
 		}
 	}
 
-	void DeductStepCount()
+	void AddStepCount()
 	{
-		steps -= 1;
-
-		if (steps <= 0)
-		{
-			steps = 0;
-		}
+		manager.steps+= 1;
 	}
 }
