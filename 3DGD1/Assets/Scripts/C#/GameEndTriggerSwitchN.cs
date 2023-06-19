@@ -8,13 +8,18 @@ public class GameEndTriggerSwitchN : MonoBehaviour {
 	public GameEndTriggerSwitchN secondWin;
 	public bool main;
 	LevelManager manager;
+    private void Start()
+    {
+		manager = FindObjectOfType<LevelManager>();
+    }
     private void Update()
     {
 		if (main)
 		{
 			if (isTriggered && secondWin.isTriggered == true)
 			{
-				StartCoroutine(LoadWin());
+				StartCoroutine(manager.Score());
+				LoadWin();
 			}
 		}
 	}
@@ -22,16 +27,15 @@ public class GameEndTriggerSwitchN : MonoBehaviour {
 	{
 		if (collider.GetComponent<CubeRoll>())
 		{
+			collider.GetComponent<CubeRoll>().canMove = false;
 			isTriggered = true;
 		}
 	}
 
-	IEnumerator LoadWin()
+	void LoadWin()
     {
-		PlayerPrefs.SetFloat(SceneManager.GetActiveScene().ToString(), 1);
-		PlayerPrefs.SetFloat(SceneManager.GetActiveScene().ToString() + "Time Taken", CountDownTime.timeTaken);
-		PlayerPrefs.SetInt(SceneManager.GetActiveScene().ToString() + "Steps Taken", manager.steps);
-		yield return new WaitForSeconds(1);
-		SceneManager.LoadScene("Win");
+		PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name, 1);
+		PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name + "Time Taken", CountDownTime.timeTaken);
+		PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "Steps Taken", manager.steps);
 	}
 }

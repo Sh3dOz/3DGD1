@@ -8,13 +8,18 @@ public class CountDownTime : MonoBehaviour {
 
 	private float startTime = 0f; // Time taken to complete game
 	public static float timeTaken;
+	LevelManager manager;
 
 	void Start() {
 		GetComponent<Text>().material.color = Color.white; // GUI text color
+		manager = FindObjectOfType<LevelManager>();
 	}
 
 	void Update() {
-		CountDown();
+		if (!manager.gameEnd)
+		{
+			CountDown();
+		}
 	}
 
 	void CountDown() {

@@ -12,14 +12,17 @@ public class LevelSelect : MonoBehaviour
     CameraAnimation cameraAnimation;
     public Text timeTaken;
     public Text stepsTaken;
+    public AudioSource SFX;
+    public AudioClip sfxSelect;
     private void Start()
     {
         cameraAnimation = FindObjectOfType<CameraAnimation>();
     }
     public void NextLevelRight()
     {
+        SFX.PlayOneShot(sfxSelect);
         index++;
-        if (index > levels.Length)
+        if (index > levels.Length-1)
         {
             index--;
             float time;
@@ -40,7 +43,6 @@ public class LevelSelect : MonoBehaviour
         }
         else
         {
-            cameraAnimation.isMoving = true;
             float time;
             int steps;
             time = PlayerPrefs.GetFloat(levels[index].levelToLoad + "Time Taken");
@@ -61,6 +63,7 @@ public class LevelSelect : MonoBehaviour
 
     public void NextLevelLeft()
     {
+        SFX.PlayOneShot(sfxSelect);
         index--;
         if (index < 0)
         {
@@ -83,8 +86,7 @@ public class LevelSelect : MonoBehaviour
 
         }
         else
-        {
-            cameraAnimation.isMoving = true;
+        { 
             float time;
             int steps;
             time = PlayerPrefs.GetFloat(levels[index].levelToLoad + "Time Taken");
@@ -105,6 +107,7 @@ public class LevelSelect : MonoBehaviour
 
     public void StartLevel()
     {
-        if (PlayerPrefs.GetInt(levels[index].levelToLoad) == 1) SceneManager.LoadScene(levels[index].levelToLoad);
+        SFX.PlayOneShot(sfxSelect);
+        SceneManager.LoadScene(levels[index].levelToLoad);
     }
 }

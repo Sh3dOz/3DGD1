@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class CameraAnimation : MonoBehaviour
 {
-    public bool isMoving;
     Animator myAnim;
     LevelSelect levelSelect;
     public Text timeTaken;
@@ -21,19 +20,13 @@ public class CameraAnimation : MonoBehaviour
     void Update()
     {
         myAnim.SetInteger("Index", levelSelect.index);
-        myAnim.SetBool("IsMoving", isMoving);
-    }
-
-    public void NotMoving()
-    {
-        isMoving = false;
     }
 
     public void EnableStart()
     {
         if (levelSelect.index > 0)
         {
-            if (PlayerPrefs.GetFloat(levelSelect.levels[levelSelect.index].levelToLoad) != 1)
+            if (PlayerPrefs.GetFloat(levelSelect.levels[levelSelect.index-1].levelToLoad) != 1)
             {
                 levelSelect.startButton.SetActive(false);
             }
@@ -41,6 +34,10 @@ public class CameraAnimation : MonoBehaviour
             {
                 levelSelect.startButton.SetActive(true);
             }
+        }
+        else
+        {
+            levelSelect.startButton.SetActive(true);
         }
     }
 

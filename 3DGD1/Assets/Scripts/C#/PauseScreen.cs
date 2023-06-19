@@ -63,7 +63,7 @@ public class PauseScreen : MonoBehaviour
         }
         else if (sfxSlider.value == sfxSlider.minValue)
         {
-            masterImage.overrideSprite = audioOff;
+            SFXImage.overrideSprite = audioOff;
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -80,12 +80,12 @@ public class PauseScreen : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Resume()
     {
-        pauseScreen.SetActive(false);
+        pauseScreen.SetActive(!pauseScreen.activeInHierarchy);
     }
 
     void SetMasterVolume(float value)

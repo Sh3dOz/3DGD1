@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class CubeRoll : MonoBehaviour
 {
 	public GameObject secondCube;
-	bool canMove = true;
+	public bool canMove = true;
 	Rigidbody rb;
 	public Transform cubeMesh;
 	public bool rollForever = false;
